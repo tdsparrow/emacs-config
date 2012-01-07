@@ -11,5 +11,7 @@
 (require 'dired)                        ;Dired
 (require 'tempbuf)                      ;自动关闭临时buffer
 (require 'mldonkey)                     ;牛逼的mldonkey
+(require 'auto-complete)                ;自动补全
+(require 'company)                      ;代码自动补全
 
 (provide 'init-depend)

@@ -104,7 +104,7 @@
 (custom-set-variables
  '(ac-sources
    '(
-     ac-source-yasnippet ;this source need file `auto-complete-yasnippet.el'
+     ;;ac-source-yasnippet ;this source need file `auto-complete-yasnippet.el'
      ;; ac-source-semantic    ;this source need file `auto-complete-semantic.el'
      ac-source-imenu
      ac-source-abbrev

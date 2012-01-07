@@ -364,19 +364,19 @@ from tradition chinese to simple chinese" t)
 
 ;;; ### Tempbuf ###
 ;;; --- 临时Buffer管理
-;;(setq tempbuf-kill-message nil)         ;不在Mode-line显示删除临时buffer提示消息
-;;(setq tempbuf-minimum-timeout 30)       ;删除 buffer 的最低期限
-;; (dolist (hook (list
-;;                'compilation-mode-hook     ;编译模式
-;;                'comint-mode-hook          ;comint 模式
-;;                'completion-list-mode-hook ;补全列表模式
-;;                'help-mode-hook            ;帮助模式
-;;                'Info-mode-hook            ;Info 模式
-;;                'calc-mode-hook            ;计算器模式
-;;                'gnus-article-mode-hook    ;Gnus 文章模式
-;;                'gnus-kill-file-mode       ;Gnus 删除文件模糊
-;;                ))
-;;   (add-hook hook 'turn-on-tempbuf-mode)) ;加载自动清理临时buffer
+(setq tempbuf-kill-message nil)         ;不在Mode-line显示删除临时buffer提示消息
+(setq tempbuf-minimum-timeout 30)       ;删除 buffer 的最低期限
+(dolist (hook (list
+               'compilation-mode-hook     ;编译模式
+               'comint-mode-hook          ;comint 模式
+               'completion-list-mode-hook ;补全列表模式
+               'help-mode-hook            ;帮助模式
+               'Info-mode-hook            ;Info 模式
+               'calc-mode-hook            ;计算器模式
+               'gnus-article-mode-hook    ;Gnus 文章模式
+               'gnus-kill-file-mode       ;Gnus 删除文件模糊
+               ))
+  (add-hook hook 'turn-on-tempbuf-mode)) ;加载自动清理临时buffer
 
 ;;; ### Breadcrumb ###
 ;;; --- 文件书签管理
