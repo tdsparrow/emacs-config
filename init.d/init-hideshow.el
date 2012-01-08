@@ -82,6 +82,7 @@
                'java-mode-hook
                'perl-mode-hook
                'php-mode-hook
+               'c++-mode-hook
                'emacs-lisp-mode-hook
                'lisp-mode-hook
                ))

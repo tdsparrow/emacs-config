@@ -3,8 +3,19 @@
 (setq mldonkey-port 4000)                                            ;端口, 用于telnet
 
 (setq exec-path '( "/usr/local/bin"
-				   "/usr/bin"
-				   "/bin"
-				   ))
+                   "/usr/bin"
+                   "/bin"
+                   ))
+(setenv "PATH"
+        (concat
+         "/usr/local/bin" ":"
+         "/usr/bin" ":"
+         "/bin" ":"
+         "/usr/sbin" ":"
+         "/sbin"
+         ))
+
+(setq auto-install-use-wget nil)                                    ;auto-install禁用wget
+(load "init-var-local.el" t)                                        ;加载本地变量
 
 (provide 'init-var)

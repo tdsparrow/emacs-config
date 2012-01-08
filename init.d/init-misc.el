@@ -158,6 +158,7 @@
                'scheme-mode-hook
                'c-mode-hook
                'c++-mode-hook
+			   'ruby-mode-hook
                'java-mode-hook
                'haskell-mode-hook
                'asm-mode-hook
@@ -413,7 +414,7 @@ from tradition chinese to simple chinese" t)
 
 ;;; ### Xgtags ###
 ;;; --- Gtags 的界面
-(add-hook 'c-mode-common-hook 'xgtags-mode)
+;;(add-hook 'c-mode-common-hook 'xgtags-mode)
 
 ;;; ### Browse-kill-ring ###
 ;;; --- 浏览删除环
@@ -552,8 +553,8 @@ from tradition chinese to simple chinese" t)
 
 ;;; ### highlight-cl ###
 ;;; --- 高亮 `cl' 函数
-(add-hook 'emacs-lisp-mode-hook 'highlight-cl-add-font-lock-keywords)
-(add-hook 'lisp-interaction-mode-hook 'highlight-cl-add-font-lock-keywords)
+;;(add-hook 'emacs-lisp-mode-hook 'highlight-cl-add-font-lock-keywords)
+;;(add-hook 'lisp-interaction-mode-hook 'highlight-cl-add-font-lock-keywords)
 
 ;;; ### apt-utils ###
 ;;; --- apt 工具

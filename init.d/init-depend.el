@@ -8,10 +8,14 @@
 (require 'anything-config)              ;Anything config
 (require 'anything-complete)            ;Anything complete
 (require 'yasnippet)                    ;类似TextMate超酷的模版模式
+(require 'yasnippet-bundle)             ;各种模版
 (require 'dired)                        ;Dired
 (require 'tempbuf)                      ;自动关闭临时buffer
 (require 'mldonkey)                     ;牛逼的mldonkey
 (require 'auto-complete)                ;自动补全
 (require 'company)                      ;代码自动补全
-
+(require 'flymake)                      ;自动语法检查
+(require 'flymake-ruby)                 ;自动语法检查
+(require 'fullscreen)                   ;全屏显示
+(require 'dict)
 (provide 'init-depend)
