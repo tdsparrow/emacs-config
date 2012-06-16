@@ -107,8 +107,7 @@
 
 
                                         ;(color-theme-aalto-light)
-(require 'color-theme-tango)
-                                        ;(color-theme-tango)
+(require 'color-theme-tango)            ;(color-theme-tango)
 
 ;; WITHOUT color theme
                                         ;(set-background-color "lightyellow")

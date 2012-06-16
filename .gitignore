@@ -3,3 +3,5 @@ elpa/*
 places
 backups/*
 url/*
+*#
+site-lisp/package/*

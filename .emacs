@@ -56,6 +56,7 @@
 ;;
 (setq load-path (cons "~/.emacs.d/init.d/" load-path))
 (setq load-path (cons "~/.emacs.d/site-lisp/" load-path))
+(setq load-path (cons "~/.emacs.d/site-lisp/package" load-path))
 (setq load-path (cons "~/.emacs.d/auto-install/" load-path))
 
 ;; Assuming emacs 24
@@ -69,3 +70,5 @@
 (require 'init-depend)
 (require 'init-display)
 (require 'init-emodes)
+
+(color-theme-tango)

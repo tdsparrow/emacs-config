@@ -18,4 +18,6 @@
 (require 'flymake-ruby)                 ;自动语法检查
 (require 'fullscreen)                   ;全屏显示
 (require 'dict)
+(require 'semantic)
+
 (provide 'init-depend)
