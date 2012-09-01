@@ -159,6 +159,7 @@
                'c-mode-hook
                'c++-mode-hook
 			   'ruby-mode-hook
+               'text-mode-hook
                'java-mode-hook
                'haskell-mode-hook
                'asm-mode-hook
