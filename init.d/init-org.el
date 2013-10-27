@@ -85,7 +85,7 @@
           '(lambda ()
              (smiley-buffer (current-buffer)) ;自动转换笑脸
              ))
-(org-remember-insinuate)                ;Org-remeber 初始化
+;;(org-remember-insinuate)                ;Org-remeber 初始化
 (setq org-directory "~/Org/")   ;设置默认的目录
 (setq org-default-notes-file            ;设置默认的笔记文件
       (concat org-directory "gtd.org"))
@@ -93,6 +93,16 @@
       '(
         ("Todo" ?o "* TODO %?\n  %i\n  %a" "~/Org/gtd.org" "Other")
         ))
+
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "START(s!)" "|" "DONE(d!)" "CANCELED(c@)")))
+
+(require 'org-publish)
+(add-to-list 'org-publish-project-alist
+             '("blog" 
+               :base-directory "~/Org/blog"
+               :publishing-directory "~/Sources/tdsparrow.github.com/"
+               ))
 
 (provide 'init-org)
 
