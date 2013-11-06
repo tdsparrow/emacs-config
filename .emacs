@@ -1,4 +1,4 @@
-;;--------------------------------------
+;--------------------------------------
 ;; My personal .emacs file
 ;;    * try to cover different evn for linux, macos or win32
 ;;
@@ -56,7 +56,6 @@
 ;;
 (setq load-path (cons "~/.emacs.d/init.d/" load-path))
 (setq load-path (cons "~/.emacs.d/site-lisp/" load-path))
-(setq load-path (cons "~/.emacs.d/site-lisp/package" load-path))
 (setq load-path (cons "~/.emacs.d/auto-install/" load-path))
 
 ;; Assuming emacs 24
@@ -64,6 +63,9 @@
 (require 'package)
 (add-to-list 'package-archives
 	     '("marmalde" . "http://marmalade-repo.org/packages/") t)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
 (package-initialize)
 
 (require 'init-var)
@@ -71,4 +73,5 @@
 (require 'init-display)
 (require 'init-emodes)
 
-(color-theme-tango)
+
+(setq-default indent-tabs-mode nil)

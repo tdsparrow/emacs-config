@@ -15,7 +15,13 @@
          "/sbin"
          ))
 
+(setenv "SBCL_HOME"
+        "/usr/lib64/sbcl")
+
 (setq auto-install-use-wget nil)                                    ;auto-install禁用wget
 (load "init-var-local.el" t)                                        ;加载本地变量
+
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "google-chrome")                   ;default browser
 
 (provide 'init-var)

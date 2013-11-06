@@ -141,6 +141,7 @@
 (add-hook 'haskell-mode-hook '(lambda ()
                                 (add-to-list 'ac-sources 'ac-source-haskell)))
 
+
 (provide 'init-auto-complete)
 
 ;;; init-auto-complete.el ends here

@@ -76,8 +76,9 @@
 
 ;;; Code:
 
-(yas/initialize)
-(yas/load-directory "~/.emacs.d/yasnippet/snippets/")
+;;(yas/initialize)
+;;(yas/load-directory "~/.emacs.d/yasnippet/snippets/")
+(yas-global-mode 1)
 
 (provide 'init-yasnippet)
 

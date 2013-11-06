@@ -8,7 +8,7 @@
 (require 'anything-config)              ;Anything config
 (require 'anything-complete)            ;Anything complete
 (require 'yasnippet)                    ;类似TextMate超酷的模版模式
-(require 'yasnippet-bundle)             ;各种模版
+;;(require 'yasnippet-bundle)             ;各种模版
 (require 'dired)                        ;Dired
 (require 'tempbuf)                      ;自动关闭临时buffer
 (require 'mldonkey)                     ;牛逼的mldonkey
@@ -19,5 +19,7 @@
 (require 'fullscreen)                   ;全屏显示
 (require 'dict)
 (require 'semantic)
+(require 'irfc)
+(require 'elpy)
 
 (provide 'init-depend)

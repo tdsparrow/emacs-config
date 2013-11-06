@@ -150,7 +150,7 @@
 ;;; ### Indent ###
 ;;; --- 缩进设置
 (setq-default indent-tabs-mode t)       ;默认不用空格替代TAB
-(setq default-tab-width 4)              ;设置TAB默认的宽度
+(setq default-tab-width 2)              ;设置TAB默认的宽度
 (dolist (hook (list                     ;设置用空格替代TAB的模式
                'emacs-lisp-mode-hook
                'lisp-mode-hook
@@ -158,7 +158,7 @@
                'scheme-mode-hook
                'c-mode-hook
                'c++-mode-hook
-			   'ruby-mode-hook
+               'ruby-mode-hook
                'text-mode-hook
                'java-mode-hook
                'haskell-mode-hook
@@ -256,7 +256,7 @@ from tradition chinese to simple chinese" t)
                     ("\\.cron\\(tab\\)?\\'" . crontab-mode)
                     ("cron\\(tab\\)?\\." . crontab-mode)
                     ("\\.a90\\'" . intel-hex-mode)
-					("\\.md\\'" . markdown-mode)
+                    ("\\.md\\'" . markdown-mode)
                     ("\\.hex\\'" . intel-hex-mode)))
   (add-to-list 'auto-mode-alist elt-cons))
 
@@ -537,7 +537,7 @@ from tradition chinese to simple chinese" t)
 
 ;;; ### Irfc ###
 ;;; --- RFC 文档阅读
-(setq irfc-directory "/data/Book/Network_Programming/RFC-all") ;设置存储目录
+(setq irfc-directory "~/rfc") ;设置存储目录
 (custom-set-variables                                          ;自动关联 `irfc-mode'
  '(irfc-assoc-mode t))
 

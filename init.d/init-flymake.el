@@ -78,11 +78,11 @@
 
 ;; flymake
 (dolist (hook (list
-               'haskell-mode-hook
+               ;;'haskell-mode-hook
                'c-mode-hook
                'c++-mode-hook
                'java-mode-hook
-			   'ruby-mode-hook
+               'ruby-mode-hook
                ))
   (add-hook hook 'flymake-find-file-hook))
 ;; flymake-shell

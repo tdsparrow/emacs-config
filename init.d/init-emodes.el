@@ -17,7 +17,7 @@
 (require 'init-ispell)                  ;拼写检查
 ;(require 'init-company)                 ;代码补全
 (require 'init-semantic)                ;语言元素提取
-
+(require 'init-elpy)
 ;; (require 'init-time)                    ;时间设置
 ;; (require 'init-backup)                  ;备份设置
 ;; (require 'init-auto-save)               ;自动保存

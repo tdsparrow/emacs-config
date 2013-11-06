@@ -94,6 +94,7 @@
 ;; Snow Leopard users may try Menlo-12, other should consider Monaco-12.
 (add-to-list 'default-frame-alist '(font . "Monaco-12")) 
 
+(require 'zenburn-theme)
 ;; =================================================================
 ;; Emacs Color Theme
 ;; see http://www.emacswiki.org/emacs/ColorTheme
@@ -101,22 +102,18 @@
 ;; screenshots
 ;; =================================================================
 ;; WITH color theme
-(require 'color-theme)
+;;(require 'color-theme)
+
 ;;(color-theme-initialize)
-(setq color-theme-is-global t)
+;;(setq color-theme-is-global t)
+
+;;(color-theme-solarized-dark)
 
 
-                                        ;(color-theme-aalto-light)
-(require 'color-theme-tango)            ;(color-theme-tango)
-
-;; WITHOUT color theme
-                                        ;(set-background-color "lightyellow")
-
-
-(setq default-frame-alist
-      '((cursor-color . "green")
-        (cursor-type . box)))
-(set-default 'cursor-type 'box)
+;;(setq default-frame-alist
+;;      '((cursor-color . "green")
+;;        (cursor-type . box)))
+;;(set-default 'cursor-type 'box)
 
 
 ;; =================================================================
