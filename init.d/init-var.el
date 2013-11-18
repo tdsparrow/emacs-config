@@ -24,4 +24,7 @@
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "google-chrome")                   ;default browser
 
+(setq auto-install-save-confirm nil)
+(setq auto-install-install-confirm nil)
+
 (provide 'init-var)

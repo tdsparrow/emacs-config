@@ -68,6 +68,8 @@
 
 (package-initialize)
 
+(require 'auto-install)
+(require 'init-packages)
 (require 'init-var)
 (require 'init-depend)
 (require 'init-display)
