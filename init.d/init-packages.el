@@ -6,11 +6,10 @@
                                     starter-kit-ruby starter-kit-js cursor-chg auto-complete company
                                     markdown-mode scala-mode yaml-mode color-theme flymake-ruby 
                                     tabbar highlight-parentheses window-number elpy zenburn-theme fit-frame
-                                    anything anything-config anything-match-plugin anything-obsolete anything-complete
-                                    yasnippet )
+                                    anything winpoint yasnippet tempbuf ctypes)
   "A list of packages to ensure are installed at launch.")
 
-(defvar emacswiki-packages '(fullscreen irfc scroll-mode-line-mode))
+(defvar emacswiki-packages '(fullscreen irfc scroll-mode-line-mode traverselisp dict) )
 
 (dolist (p elpa-packages)
   (when (not (package-installed-p p))

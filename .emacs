@@ -54,8 +54,8 @@
 ;; ---------------------------------
 ;; For packages not included in ELPA
 ;;
-(setq load-path (cons "~/.emacs.d/init.d/" load-path))
-(setq load-path (cons "~/.emacs.d/site-lisp/" load-path))
+(setq load-path (cons "~/.emacs.d/emacs-config/init.d/" load-path))
+(setq load-path (cons "~/.emacs.d/emacs-config/site-lisp/" load-path))
 (setq load-path (cons "~/.emacs.d/auto-install/" load-path))
 
 ;; Assuming emacs 24
