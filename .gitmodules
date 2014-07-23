@@ -1,3 +1,0 @@
-[submodule "site-lisp/package"]
-	path = site-lisp/package
-	url = https://github.com/wcy123/emacs-package.git
