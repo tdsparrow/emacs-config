@@ -57,6 +57,7 @@
 (setq load-path (cons "~/.emacs.d/emacs-config/init.d/" load-path))
 (setq load-path (cons "~/.emacs.d/emacs-config/site-lisp/" load-path))
 (setq load-path (cons "~/.emacs.d/auto-install/" load-path))
+(setq custom-theme-load-path (cons "~/Sources/emacs-color-theme-solarized" custom-theme-load-path))  
 
 ;; Assuming emacs 24
 ;; Get this from emacs-starter-kit
@@ -75,5 +76,9 @@
 (require 'init-display)
 (require 'init-emodes)
 
+
+(set-frame-parameter nil 'background-mode 'dark)
+(set-terminal-parameter nil 'background-mode 'dark)
+(load-theme 'solarized t)                           
 
 (setq-default indent-tabs-mode nil)

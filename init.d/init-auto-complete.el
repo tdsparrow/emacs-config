@@ -93,7 +93,7 @@
                         perl-mode cperl-mode python-mode ruby-mode
                         ecmascript-mode javascript-mode php-mode css-mode
                         makefile-mode sh-mode fortran-mode f90-mode ada-mode
-                        xml-mode sgml-mode
+                        xml-mode sgml-mode erlang-mode
                         haskell-mode literate-haskell-mode
                         emms-tag-editor-mode
                         asm-mode 
@@ -108,7 +108,7 @@
      ;; ac-source-semantic    ;this source need file `auto-complete-semantic.el'
      ;ac-source-imenu
      ac-source-abbrev
-     ac-source-words-in-buffer
+     ac-source-words-in-all-buffer
      ac-source-files-in-current-dir
      ac-source-filename
      )))

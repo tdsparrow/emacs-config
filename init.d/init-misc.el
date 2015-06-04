@@ -90,7 +90,7 @@
 (show-paren-mode t)                     ;显示括号匹配
 (which-function-mode t)                 ;在状态条上显示当前光标在哪个函数体内部
 (auto-compression-mode 1)               ;打开压缩文件时自动解压缩
-(mouse-avoidance-mode "banish")         ;只要一操作鼠标自动闪开
+(mouse-avoidance-mode 'jump)         ;只要一操作鼠标自动闪开
 (setq-default comment-style 'indent)    ;设定自动缩进的注释风格
 (setq ring-bell-function 'ignore)       ;关闭烦人的出错时的提示声
 (setq inhibit-startup-message t)        ;关闭起动时闪屏
@@ -161,6 +161,7 @@
                'ruby-mode-hook
                'text-mode-hook
                'java-mode-hook
+               'erlang-mode-hook
                'haskell-mode-hook
                'asm-mode-hook
                'emms-tag-editor-mode-hook
@@ -168,10 +169,6 @@
                ))
   (add-hook hook '(lambda () (setq indent-tabs-mode nil))))
 
-;;; ### Windows ###
-;;; --- 用于保存和管理窗口的配置方案
-;;(win:startup-with-window)
-;;(setq win:configuration-file "~/MyEmacs/Configure-File/Windows/windows-configure") ;窗口布局管理保存文件
 
 ;;; ### Revive ###
 ;;; --- 用于记录恢复特定窗口配置方案
@@ -183,11 +180,6 @@
 ;;; ### Mode-line ###
 ;;; --- mode-line
 (delete 'win:mode-string global-mode-string) ;在 `global-mode-string' 中去掉窗口数字
-
-;;; ### Scroll-mode-line ###
-;;; --- 滚动 Mode-line 的信息
-(require 'scroll-mode-line-mode)
-(scroll-mode-line-mode 1)
 
 ;;; ### Ctypes-auto-parse ###
 ;;; --- 自动对 C 语言的类型定义识别并进行语法加亮
@@ -371,7 +363,7 @@ from tradition chinese to simple chinese" t)
 (dolist (hook (list
                'compilation-mode-hook     ;编译模式
                'comint-mode-hook          ;comint 模式
-               'completion-list-mode-hook ;补全列表模式
+               ;;'completion-list-mode-hook ;补全列表模式
                'help-mode-hook            ;帮助模式
                'Info-mode-hook            ;Info 模式
                'calc-mode-hook            ;计算器模式
@@ -390,17 +382,6 @@ from tradition chinese to simple chinese" t)
 (setq tramp-default-method "ssh")         ;设置传送文件默认的方法
 (custom-set-variables '(tramp-verbose 0)) ;设置tramp的响应方式, 关闭后不弹出消息
 
-;;; ### Calendar ###
-;;; --- 日历
-(setq calendar-week-start-day 1)                ;星期一作为一周开始的第一天
-(setq calendar-chinese-location-name "Chengdu") ;本地名称
-(setq calendar-date-style (quote iso))          ;日期格式种类
-(setq diary-file "~/Diary/diary")               ;日记文件
-
-;;; ### Traverse ###
-;;; --- 在目录中搜索和替换, 支持AVFS (虚拟文件系统, 支持压缩文件直读)
-(setq traverse-use-avfs t)                           ;开启AVFS
-(add-to-list 'traverse-ignore-files ".ledger-cache") ;忽略的文件
 
 ;;; ### Term ###
 ;;; --- 终端模拟器
@@ -422,13 +403,6 @@ from tradition chinese to simple chinese" t)
 (setq browse-kill-ring-quit-action      ;设置退出动作
       (quote save-and-restore))         ;保存还原窗口设置
 
-;;; ### Window-number ###
-;;; --- 窗口数字导航
-(window-number-mode 1)                  ;开启
-
-;;; ### Scim-Bridge ###
-;;; --- SCIM Bridge 的 Emacs 接口
-;;(scim-mode t)                           ;开启 scim-mode
 
 ;;; ### cursor-chg ###
 ;;; --- 光标随着状态改变形状和颜色
