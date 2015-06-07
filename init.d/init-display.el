@@ -45,10 +45,6 @@
 ;;         (remove-text-properties 0 (length text) '(foreign-selection nil) text))
 ;;     text))
 
-;; === Default size of the frame ===
-(set-frame-width (selected-frame) 120)
-(set-frame-height (selected-frame) 40)
-
 ;; === remove the few annoyance of default emacs ===
 ;; Use "y or n" answers instead of full words "yes or no"
 (fset 'yes-or-no-p 'y-or-n-p) 
@@ -94,27 +90,7 @@
 ;; Snow Leopard users may try Menlo-12, other should consider Monaco-12.
 (add-to-list 'default-frame-alist '(font . "Monaco-12")) 
 
-(require 'zenburn-theme)
-;; =================================================================
-;; Emacs Color Theme
-;; see http://www.emacswiki.org/emacs/ColorTheme
-;; see http://code.google.com/p/gnuemacscolorthemetest/ for direct
-;; screenshots
-;; =================================================================
-;; WITH color theme
-;;(require 'color-theme)
-
-;;(color-theme-initialize)
-;;(setq color-theme-is-global t)
-
-;;(color-theme-solarized-dark)
-
-
-;;(setq default-frame-alist
-;;      '((cursor-color . "green")
-;;        (cursor-type . box)))
-;;(set-default 'cursor-type 'box)
-
+(require 'monokai-theme)
 
 ;; =================================================================
 ;; Font Lock configuration
@@ -151,27 +127,8 @@
                                         ;(set-face-background 'region "lightblue")
 
 ;; === translate ANSI escape sequences into faces ===
-(GNUEmacs
- (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
- (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on))
-
-;; === Auto fit the size of the frame to the buffer content ===
-;; see http://www.emacswiki.org/emacs/Shrink-Wrapping_Frames
-;; run 'M-x fit-frame' for that
-(require 'fit-frame)
-(add-hook 'after-make-frame-functions 'fit-frame)
-
-;; =================================================================
-;; Aquamacs specific 
-;; =================================================================
-;; see http://www.emacswiki.org/emacs/AquamacsEmacsCompatibilitySettings
-(Aquamacs
- (aquamacs-autoface-mode -1)  ; no mode-specific faces, everything in Monaco
- ;; do not load persistent scratch buffer
- (setq aquamacs-scratch-file nil)
- ;; do not make initial frame visible
- (setq show-scratch-buffer-on-startup nil)
-)
+;;(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
+;;(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
 
 (provide 'init-display)

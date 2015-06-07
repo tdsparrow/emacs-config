@@ -97,12 +97,12 @@
 (setq org-todo-keywords
       '((sequence "TODO(t)" "START(s!)" "|" "DONE(d!)" "CANCELED(c@)")))
 
-(require 'org-publish)
-(add-to-list 'org-publish-project-alist
-             '("blog" 
-               :base-directory "~/Org/blog"
-               :publishing-directory "~/Sources/tdsparrow.github.com/"
-               ))
+;; (require 'org-publish)
+;; (add-to-list 'org-publish-project-alist
+;;              '("blog" 
+;;                :base-directory "~/Org/blog"
+;;                :publishing-directory "~/Sources/tdsparrow.github.com/"
+;;                ))
 
 (provide 'init-org)
 

@@ -417,6 +417,11 @@ from tradition chinese to simple chinese" t)
 ;;; --- Gtags 的界面
 ;;(add-hook 'c-mode-common-hook 'xgtags-mode)
 
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+              (ggtags-mode 1))))
+
 ;;; ### Browse-kill-ring ###
 ;;; --- 浏览删除环
 (setq browse-kill-ring-quit-action      ;设置退出动作
