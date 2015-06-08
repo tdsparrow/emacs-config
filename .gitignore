@@ -5,3 +5,4 @@ backups/*
 url/*
 *#
 site-lisp/package/*
+*~
