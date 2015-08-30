@@ -6,3 +6,4 @@ url/*
 *#
 site-lisp/package/*
 *~
+*.elc
