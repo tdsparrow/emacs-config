@@ -17,4 +17,6 @@
       )
 
 (add-to-list 'load-path "~/.emacs.d/init.d")
+(add-to-list 'load-path "~/.emacs.d/local")
+(require 'my-custom-vars nil 'noerror)
 (require (intern (concat "init-" (number-to-string emacs-major-version))))

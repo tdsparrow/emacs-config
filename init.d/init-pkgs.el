@@ -1,2 +1,2 @@
-(el-get 'sync '(go-mode helm yaml-mode monokai-theme elpy))
+(el-get 'sync my-pkg-list)
 (provide 'init-pkgs)
