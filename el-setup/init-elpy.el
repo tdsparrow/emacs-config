@@ -1,5 +1,6 @@
 (require 'elpy)
 (elpy-enable)
-(elpy-use-ipython)
+(when (executable-find "ipython")
+    (elpy-use-ipython))
 
 (provide 'init-elpy)
