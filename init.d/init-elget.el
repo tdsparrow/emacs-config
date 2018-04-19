@@ -13,4 +13,8 @@
 
 (setq el-get-user-package-directory "~/.emacs.d/el-setup")
 
+(add-to-list 'package-archives
+	     '("melpa" . "http://melpa.org/packages/"))
+(package-refresh-contents)
+
 (provide 'init-elget)
