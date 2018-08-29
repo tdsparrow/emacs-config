@@ -1,5 +1,9 @@
 (add-hook 'python-mode-hook 'anaconda-mode)
 
+(add-hook 'python-mode-hook
+          (lambda ()
+            (add-to-list 'write-file-functions 'delete-trailing-whitespace)))
+
 (require 'python)
 
 (setq
@@ -14,5 +18,8 @@
     "';'.join(module_completion('''%s'''))\n"
   python-shell-completion-string-code
   "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
+
+
+
 
 (provide 'init-anaconda-mode)
