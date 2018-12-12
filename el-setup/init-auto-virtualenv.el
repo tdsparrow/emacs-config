@@ -8,13 +8,29 @@
 
 (setq original-anaconda-mode-server-command anaconda-mode-server-command)
 
+(defun split-python-command (a b substr)
+  "Split python command to insert code.
+A prefix string list.
+B postfix string list.
+SUBSTR string to find spot."
+  (if (null b)
+      `(a b)
+    (if (string-match-p substr (car b))
+	(list (append a (list (car b))) (cdr b))
+      (split-python-command (append a (list (car b))) (cdr b) substr)
+      )
+    )
+  )
+
 (defun reload-env-on-find-def ()
     "reload virtualenv on find definition."
     (interactive)
     (when (not (equal auto-virtualenv--path pyvenv-virtual-env))
       (setq auto-virtualenv--path nil)
-      (setq anaconda-mode-server-command (concat (format "import sys\nsys.path.append('%s')" auto-virtualenv--project-root)
-	      original-anaconda-mode-server-command)))
+      (let ((original-code (split-python-command () (split-string original-anaconda-mode-server-command "\n") "__future__"))
+	    (new-code (format "import sys\nsys.path.append('%s')" auto-virtualenv--project-root)))
+	(setq anaconda-mode-server-command (string-join (apply 'append (car original-code) (list new-code) (cdr original-code)) "\n")
+	    )))
     (auto-virtualenv-set-virtualenv)
     (anaconda-mode-find-definitions))
 
