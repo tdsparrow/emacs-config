@@ -1,0 +1,9 @@
+(:name my-go-company
+       :description "An autocompletion daemon for the Go programming language"
+       :type git
+       :depends (company-mode go-mode)
+       :url "https://github.com/mdempsky/gocode.git"
+       :load-path ("emacs-company")
+       :prepare (eval-after-load 'go-mode
+                  '(require 'company-go))
+       )

@@ -1,9 +1,8 @@
-;;; init-go-mode --- set go mode
+;;; init-gotest --- set gotest
 ;;
 ;;; Commentary:
 ;;
 ;;; Code:
-
 
 (defun gotest-kbd ()
   "Set gotest kbd."
@@ -15,8 +14,6 @@
   )
 
 (add-hook 'go-mode-hook 'gotest-kbd)
-(add-hook 'before-save-hook 'gofmt-before-save)
-
-(provide 'init-go-mode)
+(provide 'init-gotest)
 
 ;;; init-gotest ends here

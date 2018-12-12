@@ -1,3 +1,9 @@
+;;; init-elget.el --- Initialize elget configuration
+;;
+;;; Commentary:
+;;
+;;; Code:
+
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
 (unless (require 'el-get nil 'noerror)
@@ -12,6 +18,8 @@
       (eval-print-last-sexp)))
 
 (setq el-get-user-package-directory "~/.emacs.d/el-setup")
+
+(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user-recipies/")
 
 (add-to-list 'package-archives
 	     '("melpa" . "http://melpa.org/packages/"))
