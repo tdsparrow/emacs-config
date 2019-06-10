@@ -1,5 +1,5 @@
 (require 'my-local-vars nil 'noerror)
-(setq my-pkg-list '(go-mode helm yaml-mode monokai-theme yasnippet my-go-company py-yapf
+(setq my-pkg-list '(go-mode helm yaml-mode monokai-theme yasnippet py-yapf
 			    s anaconda-mode pyvenv helm-gtags web-mode tide gotest prettier-js
 			    company-anaconda virtualenvwrapper flycheck auto-virtualenv))
 
