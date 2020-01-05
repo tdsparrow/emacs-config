@@ -4,6 +4,7 @@
 
 (setq auto-virtualenv-dir (auto-virtualenv-first-file-exists-p '("~/.venv")))
 (add-to-list 'auto-virtualenv-project-root-files ".env")
+(add-to-list 'auto-virtualenv-project-root-files ".envrc")
 
 
 (setq original-anaconda-mode-server-command anaconda-mode-server-command)
