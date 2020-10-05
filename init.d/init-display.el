@@ -91,6 +91,7 @@
 (add-to-list 'default-frame-alist '(font . "Monaco-12")) 
 
 (require 'monokai-theme)
+(enable-theme 'monokai)
 
 ;; =================================================================
 ;; Font Lock configuration
