@@ -104,6 +104,7 @@
 ;;                :publishing-directory "~/Sources/tdsparrow.github.com/"
 ;;                ))
 
+(setq browse-url-browser-function 'w3m-browse-url)
 (provide 'init-org)
 
 ;;; init-org.el ends here

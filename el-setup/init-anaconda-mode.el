@@ -20,9 +20,4 @@
   ;;  "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
   )
 
-
-(require 'py-yapf)
-(add-hook 'python-mode-hook 'py-yapf-enable-on-save)
-
-
 (provide 'init-anaconda-mode)
