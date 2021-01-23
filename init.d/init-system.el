@@ -7,6 +7,9 @@
 
 (tool-bar-mode -1)
 (menu-bar-mode -1)
+
+(setq gc-cons-threshold 100000000)
+(setq read-process-output-max (* 1024 1024))
 (provide 'init-system)
 
 

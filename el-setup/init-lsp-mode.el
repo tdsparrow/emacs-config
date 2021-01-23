@@ -4,9 +4,9 @@
 
 (add-hook 'js-mode-hook #'lsp 100)
 
-(setq lsp-log-io t)
+(setq lsp-log-io nil)
 
-(require 'js-mode)
+(require 'js)
 (define-key js-mode-map [(meta ?.)] #'xref-find-definitions)
 
 (provide 'init-lsp-mode)
